@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import ExistingAllocation from "./pages/existing_allocations";
+import ExistingAllocations from "./pages/existing_allocations";
 import Login from "./pages/login";
 import NewAllocation from "./pages/new_allocation";
 import Settings from "./pages/settings";
@@ -94,21 +94,21 @@ export default function App() {
           </Link>
 
           <div className="nav-links" style={{ display: 'flex', gap: '1rem' }}>
-            <NavLink to="/events">Login</NavLink>
-            <NavLink to="/board">Existing Allocations</NavLink>
-            <NavLink to="/resources">New Allocation</NavLink>
-            <Link to="/join" style={{ color: 'white', textDecoration: 'none' }}>Settings</Link>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/existing_allocations">Existing Allocations</NavLink>
+            <NavLink to="/new_allocation">New Allocation</NavLink>
+            <Link to="/settings" style={{ color: 'white', textDecoration: 'none' }}>Settings</Link>
           </div>
         </div>
       </nav>
         
       <main style={{ paddingTop: '80px', paddingLeft: '2rem', paddingRight: '2rem' }}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/board" element={<ExistingAllocation />} />
-          <Route path="/events" element={<Login />} />
-          <Route path="/resources" element={<NewAllocation />} />
-          <Route path="/join" element={<Settings />} />
+        	<Route path="/" element={<Home />} />
+			<Route path="/login" element={<Login />} />
+			<Route path="/existing_allocations" element={<ExistingAllocations />} />
+			<Route path="/new_allocation" element={<NewAllocation />} />
+			<Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
     </Router>
