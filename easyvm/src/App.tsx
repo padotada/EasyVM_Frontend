@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import ExistingAllocation from "./pages/existing_allocation";
+import ExistingAllocation from "./pages/existing_allocations";
 import Login from "./pages/login";
 import NewAllocation from "./pages/new_allocation";
 import Settings from "./pages/settings";
@@ -95,7 +95,7 @@ export default function App() {
 
           <div className="nav-links" style={{ display: 'flex', gap: '1rem' }}>
             <NavLink to="/events">Login</NavLink>
-            <NavLink to="/board">Existing Allocation</NavLink>
+            <NavLink to="/board">Existing Allocations</NavLink>
             <NavLink to="/resources">New Allocation</NavLink>
             <Link to="/join" style={{ color: 'white', textDecoration: 'none' }}>Settings</Link>
           </div>
