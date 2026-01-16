@@ -49,64 +49,62 @@ const NewAllocation: React.FC = () => {
 					Allocate New Network
 				</h1>
 
-				<div className="w-[1105px] h-[600px] bg-[#1D1A26] shadow-5xl rounded-[10px] p-8 overflow-auto">
-					<h2 className="text-[28px] font-bold mb-4 pt-5">Placement</h2>
-					<div className="flex gap-5">
-						{placement.map(({ title, placeholder, type }) => (
-							<Textbox
-								key={title}
-								title={title}
-								placeholder={placeholder}
-								type={type}
-							/>
-						))}
-					</div>
-
-					<h2 className="text-[28px] font-bold mb-4 pt-5 mt-7">CPU & RAM</h2>
-					<div className="flex grid grid-rows-2 grid-flow-col gap-5">
-						{cpuram.map(({ title, placeholder, type }) => (
-							<Textbox
-								key={title}
-								title={title}
-								placeholder={placeholder}
-								type={type}
-							/>
-						))}
-					</div>
-
-					<h2 className="text-[28px] font-bold mb-4 pt-5 mt-7">
-						Cloud-Init Settings
-					</h2>
-					<div className="flex grid grid-rows-3 grid-flow-col gap-5">
-						{cloud.map(({ title, placeholder, type }) => (
-							<Textbox
-								key={title}
-								title={title}
-								placeholder={placeholder}
-								type={type}
-							/>
-						))}
-					</div>
-
-					<h2 className="text-[28px] font-bold mb-4 pt-5 mt-7">
-						Tags and Descriptions
-					</h2>
-					<div className="flex gap-5">
-						{tagsDescriptions.map(({ title, placeholder, type }) => (
-							<Textbox
-								key={title}
-								title={title}
-								placeholder={placeholder}
-								type={type}
-							/>
-						))}
-					</div>
-
-					<button className="w-[268px] h-[82px] rounded-[10px] bg-[#A53D1E] shadow-5xl text-white text-[28px] font-bold font-sans mt-10 mb-5">
-						{" "}
-						Create VM{" "}
-					</button>
+				<h2 className="text-[28px] font-bold mb-4 pt-5">Placement</h2>
+				<div className="flex gap-5">
+					{placement.map(({ title, placeholder, type }) => (
+						<Textbox
+							key={title}
+							title={title}
+							placeholder={placeholder}
+							type={type}
+						/>
+					))}
 				</div>
+
+				<h2 className="text-[28px] font-bold mb-4 pt-5 mt-7">CPU & RAM</h2>
+				<div className="flex grid grid-rows-2 grid-flow-col gap-5">
+					{cpuram.map(({ title, placeholder, type }) => (
+						<Textbox
+							key={title}
+							title={title}
+							placeholder={placeholder}
+							type={type}
+						/>
+					))}
+				</div>
+
+				<h2 className="text-[28px] font-bold mb-4 pt-5 mt-7">
+					Cloud-Init Settings
+				</h2>
+				<div className="flex grid grid-rows-3 grid-flow-col gap-5">
+					{cloud.map(({ title, placeholder, type }) => (
+						<Textbox
+							key={title}
+							title={title}
+							placeholder={placeholder}
+							type={type}
+						/>
+					))}
+				</div>
+
+				<h2 className="text-[28px] font-bold mb-4 pt-5 mt-7">
+					Tags and Descriptions
+				</h2>
+				<div className="flex gap-5">
+					{tagsDescriptions.map(({ title, placeholder, type }) => (
+						<Textbox
+							key={title}
+							title={title}
+							placeholder={placeholder}
+							type={type}
+						/>
+					))}
+				</div>
+
+				<button className="w-[268px] h-[82px] rounded-[10px] bg-[#A53D1E] shadow-5xl text-white text-[28px] font-bold font-sans mt-10 mb-5">
+					{" "}
+					Create VM{" "}
+				</button>
 			</div>
 		</div>
 	);
