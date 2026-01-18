@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 import ExistingAllocations from "./pages/existing_allocations";
 import Login from "./pages/login";
@@ -9,8 +9,8 @@ import Settings from "./pages/settings";
 import logo from "./assets/logo.png";
 
 interface NavLinkProps {
-	to: string;
-	children: React.ReactNode;
+  to: string;
+  children: React.ReactNode;
 }
 
 const Home: React.FC = () => (
@@ -45,21 +45,22 @@ const Home: React.FC = () => (
 );
 
 const NavLink: React.FC<NavLinkProps> = ({ to, children }) => (
-	<Link
-		to={to}
-		style={{ marginRight: "1rem",
+  <Link
+    to={to}
+    style={{ marginRight: "1rem",
       color: "white",         
       textDecoration: "none",
       fontWeight: "500"
     }}
-	>
-		{children}
-	</Link>
+  >
+    {children}
+  </Link>
 );
 
 export default function App() {
   return (
-    <Router>
+    // <Router> was here - It is now safely in main.tsx
+    <>
       <nav style={{ 
         padding: '1rem 0', 
         color: 'white',
@@ -104,13 +105,13 @@ export default function App() {
         
       <main style={{ paddingTop: '80px', paddingLeft: '2rem', paddingRight: '2rem' }}>
         <Routes>
-        	<Route path="/" element={<Home />} />
-			<Route path="/login" element={<Login />} />
-			<Route path="/existing_allocations" element={<ExistingAllocations />} />
-			<Route path="/new_allocation" element={<NewAllocation />} />
-			<Route path="/settings" element={<Settings />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/existing_allocations" element={<ExistingAllocations />} />
+          <Route path="/new_allocation" element={<NewAllocation />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
-    </Router>
+    </>
   );
 }
